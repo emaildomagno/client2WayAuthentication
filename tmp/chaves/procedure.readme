@@ -1,0 +1,4 @@
+cd /tmp/chaves
+keytool -genkey -alias MyServer -keyalg RSA -validity 1825 -keystore "MyServer.jks" -storetype JKS -dname "CN=myserver.com,OU=My Company Name,O=My Organization,L=My Location,ST=My State,C=My Country Short Code" -keypass password -storepass password
+keytool -exportcert -alias MyServer -keystore MyServer.jks -file MyServer.cer
+keytool -genkey -alias MyClient -keyalg RSA -validity 1825 -keystore MyClient.jks -storetype JKS -dname "CN=client.com,OU=Client Company,O=Client,L=CLient Location,ST=Client State,C=Client Country Short Code" -keypass password -storepass password
